@@ -13,9 +13,13 @@ base('Installation').find('recH3Rt0xupT6f8C4', function(err, record) {
     date.innerHTML = record.fields.Date;
 
     var faceImage = document.querySelector(".face-image");
-    faceImage.innerHTML = "<img src =" + "data/" + record.fields.faceImage[0].filename + ">";
+    // faceImage.innerHTML = "<img src =" + "data/" + record.fields.faceImage[0].filename + ">";
 
-    // console.log(record.fields.faceImage[0].filename);
+    var image = document.createElement('img');
+        image.setAttribute('src', record.fields.faceImage[0].url);
+        faceImage.appendChild(image);
+
+    // console.log(record.fields.faceImage[0].url);
 
     var tagline = document.querySelector(".tagline");
     tagline.innerHTML = record.fields.Tagline;
@@ -23,3 +27,6 @@ base('Installation').find('recH3Rt0xupT6f8C4', function(err, record) {
     var process = document.querySelector(".process");
     process.innerHTML = record.fields.Process;
 });
+
+
+///process.innerHTML=process.innerHTML + '   '  /// in order to add on to the innerhtml instead of overriding it
