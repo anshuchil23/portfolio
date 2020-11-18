@@ -1,0 +1,133 @@
+body{
+    background-color:#fffcf2;
+    /* background-color:#ffe9db; */
+    /* background-color:#ffffeb; */
+
+    margin:30px;
+}
+.section-heading{
+      margin: 10rem;
+      font-size: 3rem;
+      font-family: balboa-plus-primary, sans-serif;
+      font-weight: 400;   
+      font-style: normal;
+}
+.content{
+    padding: 30px;
+}
+ .type-heading-1{
+    font-size:10rem;
+    /* font-family: balboa-plus-primary, sans-serif; */
+    font-family:rig-shaded-medium-extrude, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+ }
+
+ .type-heading-2{
+    font-family: rig-shaded-bold-face, sans-serif;
+
+    font-weight: 2000;
+    font-size: 6rem;
+    font-style: normal;
+    text-align:center;
+ }
+ .type-heading-3{
+     padding-left: 20%;
+    font-family: rig-shaded-medium-face, sans-serif;
+    font-weight: 500;
+    font-size:3rem;
+    font-style: normal;
+ }
+
+ .type-body-1{
+     margin:10rem;
+    font-family: rig-shaded-bold-inline, sans-serif;
+    font-weight: 700; 
+    font-style: normal;
+    word-wrap: break-word;
+    word-spacing: 1rem;
+    /* font-style: italic; */
+ }
+
+ .type-body-2{
+    font-family: rig-shaded-light-face, sans-serif;
+
+    font-weight: 300;
+    
+    font-style: normal;
+ }
+
+ .type-link{
+    font-family: rig-shaded-light-face, sans-serif;
+
+    font-weight: 300;
+    
+    font-style: normal;
+    text-decoration: underline #474747;
+ }
+
+ .type-link:hover{
+    font-family: rig-shaded-bold-inline, sans-serif;
+    font-weight: 700; 
+    font-style: normal;
+    word-wrap: break-word;
+    word-spacing: 1rem;
+    text-decoration: underline #ff0062;
+
+ }
+
+ img{
+     width: 40rem;
+     height: auto;
+     display:block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .color{
+     display:flex;
+     flex-direction: column;
+     font-family: rig-shaded-bold-face, sans-serif;
+
+     font-weight: 2000;
+     font-size: 6rem;
+     font-style: normal;
+     text-align:center;
+ }
+ .color-primary{
+    color:#292929;
+    font-size:10rem;
+ }
+
+ .color-secondary{
+     color:#ff005d;
+     font-size: 8rem;
+ }
+ .color-tertiary{
+     color:#ffc800;
+     font-size:6rem;
+ }
+ .color-accent{
+    color: #03ffcd;
+    font-size: 3rem;
+ }
+
+ .button{
+     border:none;
+     color:white;
+     background-color: #ff005d; 
+     padding:2px 150px;
+     font-family: rig-shaded-bold-face, sans-serif;
+     font-weight: 200;
+     font-size: 3rem;
+     font-style: normal;
+     text-align:center;
+     border-radius: 6px;
+}
+
+.button:hover{
+    color: #03ffcd;
+    font-style: italic;
+    cursor: pointer;
+}
