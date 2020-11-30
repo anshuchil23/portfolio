@@ -58,19 +58,55 @@ base('Installation').find(recordID, function(err, record) {
     var title = document.querySelector(".title");
     title.innerHTML = record.fields.Name;
 
-    var process1 = document.querySelector(".process1");
-    process1.innerHTML = record.fields.Process1;
-
-    var processImages = document.querySelector(".process-images");
-    record.fields.ProcessPictures.forEach(function(attachment) {
+   if(record.fields.ProcessPictures){
+     var processImages = document.querySelector(".process-images");
+     record.fields.ProcessPictures.forEach(function(attachment) {
         var image = document.createElement('img');
         image.setAttribute('src', attachment.url);
         processImages.appendChild(image);
         // console.log(record.fields.ProcessPictures[attachment].url);
       });
+   }
 
-    var process2 = document.querySelector(".process2");
+// var processContainer = document.querySelector("process-container");
+//  processContainer.forEach(function(process){
+//    process.innerHTML = record.fields
+//  });
+   
+ var process1 = document.querySelector(".process1");
+   process1.innerHTML = record.fields.Process1;
+
+   if(record.fields.Process2){ 
+   var process2 = document.querySelector(".process2");
     process2.innerHTML = record.fields.Process2;
+   }
+   
+   if(record.fields.Process3){
+    var process3 = document.querySelector(".process3");
+    process3.innerHTML = record.fields.Process3;
+   }
+   
+   if(record.fields.Process4){
+    var process4 = document.querySelector(".process4");
+    process4.innerHTML = record.fields.Process4;
+   }
+
+   if(record.fields.Process5){
+    var process5 = document.querySelector(".process5");
+    process5.innerHTML = record.fields.Process5;
+   }
+   
+   if(record.fields.Process6){
+    var process6 = document.querySelector(".process6");
+    process6.innerHTML = record.fields.Process6;
+   }
+
+
+   
+   if(record.fields.Select1){
+     var select1 = document.querySelector(".image-1");
+     select1.innerHTML = record.fields.Select1;
+   }
  });
   }
 
@@ -90,6 +126,6 @@ base('Installation').find(recordID, function(err, record) {
       });
 
 
-      // recH3Rt0xupT6f8C4
+      // Record Test- recH3Rt0xupT6f8C4
 
 ///process.innerHTML=process.innerHTML + '   '  /// in order to add on to the innerhtml instead of overriding it

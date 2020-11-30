@@ -1,0 +1,106 @@
+body{
+    background-color:#fffcf2;
+    /* background-color:#ffe9db;  */
+    /* background-color:#ffffeb;  */
+
+    margin:30px;
+}
+
+.navbar-menu{
+    font-size: 3rem;
+    font-family: balboa-plus-fill, sans-serif;
+    font-weight: 400;   
+    font-style: normal;
+    margin:none;
+    padding:100px;
+    overflow:auto;
+    display: flex;
+    flex-direction:row;
+}
+
+.navbar-menu a{
+    text-align: center;
+    flex-grow: 1;
+    text-decoration: none;
+    color: #474747;
+}
+
+.content{
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.content h1{
+    font-family: rig-shaded-bold-face, sans-serif;
+    font-weight: 2000;
+    font-size: 6rem;
+    font-style: normal;
+    text-align:center;
+}
+
+.content p{
+    font-family: rig-shaded-light-face, sans-serif;
+    font-size: 6rem;
+    font-weight: 300;   
+    font-style: normal;
+    /* line-height: 2rem; */
+
+    line-height: 4.5rem;
+    /* letter-spacing: 0.05rem; */
+ }
+
+footer{
+    display:flex;
+    flex-direction: column;
+}
+
+.my-work{
+    font-size: 3rem;
+    font-family: balboa-plus-fill, sans-serif;
+    font-weight: 400;   
+    font-style: normal;
+    margin:none;
+    padding:100px;
+    text-align: center;
+    text-decoration: none;
+    color: #ff005d;
+}
+
+.work-categories{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding:20rem;
+    align-self: center;
+}
+
+.work-categories a{
+    font-size:10rem;
+    /* font-family: balboa-plus-primary, sans-serif; */
+    font-family:rig-shaded-bold-face, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+}
+
+.work-categories a:hover{
+    font-family:rig-shaded-medium-extrude, sans-serif;
+}
+
+.installation{
+    color:#ffc800;
+}
+
+.speculative{
+    color:#ff005d;
+}
+
+.characters{
+    color: #03ffcd;
+}
+
+.illustration{
+    color:#292929;
+}
