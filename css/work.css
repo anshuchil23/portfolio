@@ -4,6 +4,10 @@ body{
     /* background-color:#ffffeb;  */
 
     margin:30px;
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .navbar-menu{
@@ -12,7 +16,7 @@ body{
     font-weight: 400;   
     font-style: normal;
     margin:none;
-    padding:100px;
+    padding:10px;
     overflow:auto;
     display: flex;
     flex-direction:row;
@@ -25,19 +29,80 @@ body{
     color: #474747;
 }
 
+     /* HOVER ANIMATIONS FOR NAVBAR */
+
+.navbar-menu .current{
+    color: #03ffcd;
+}
+
+
+
 .content{
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px;
     display:flex;
     flex-direction: column;
+    perspective: 1px;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    height: 90vh;
+    transform-style: preserve-3d;
+}
+
+   /* OPACITY ANIMATION FOR HEADING */
+   
+@keyframes lol{
+
+    from{
+        font-weight: 2000;
+        font-size: 6rem;
+        font-style: normal;
+        text-align:center;
+        letter-spacing: 1px;
+    }
+    to{
+        font-weight: 0;
+        opacity: 0;  
+        font-size: 2rem;
+        font-style: normal;
+        text-align:center;
+        letter-spacing: 20px;
+    }
 }
 
 .content h1{
-    font-family: rig-shaded-bold-face, sans-serif;
-    font-weight: 2000;
+    font-family: rig-shaded-bold-face, sans-serif; 
+   /* font-weight: 2000;
     font-size: 6rem;
     font-style: normal;
-    text-align:center;
+    text-align:center; */
+    
+    transform: translateZ(-2px) scale(3) ;
+
+    animation: lol 1s ease-in infinite;
+    animation-play-state: paused; 
+    animation-delay: calc(var(--scroll) * -1s); 
+    animation-iteration-count: 1;
+    animation-fill-mode: both; 
+    
 }
+
+/* .poo{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    animation: lol 1s ease-in infinite;
+    animation-play-state: paused; 
+    animation-delay: calc(var(--scroll) * -1s); 
+    animation-iteration-count: 1;
+    animation-fill-mode: both; 
+} */
 
 .content p{
     font-family: rig-shaded-light-face, sans-serif;
@@ -61,7 +126,7 @@ footer{
     font-weight: 400;   
     font-style: normal;
     margin:none;
-    padding:100px;
+    /* padding:100px; */
     text-align: center;
     text-decoration: none;
     color: #ff005d;
@@ -73,6 +138,7 @@ footer{
     flex-wrap: wrap;
     padding:20rem;
     align-self: center;
+    transform: translateZ(0px);
 }
 
 .work-categories a{
@@ -81,26 +147,51 @@ footer{
     font-family:rig-shaded-bold-face, sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
+    /* text-align: center; */
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .work-categories a:hover{
-    font-family:rig-shaded-medium-extrude, sans-serif;
+    /* font-family:rig-shaded-medium-extrude, sans-serif; */
+        /* -webkit-text-stroke-width: 3px; */
+    /* -webkit-text-stroke-color:#292929; */
+    /* transform: translateZ(2px); */
+    color: transparent;
 }
 
 .installation{
     color:#ffc800;
+    background:url("https://media.giphy.com/media/CYZc66zEvcJBuyYbu9/giphy.gif");
+    background-size: auto;
+    background-position: top left;
+    -webkit-background-clip: text;
 }
+
+/* .installation:hover{
+    transform: translateZ(20px);
+} */
 
 .speculative{
     color:#ff005d;
+    background:url("https://media.giphy.com/media/6c3ueEM2eN4fS/giphy.gif");
+    background-size: auto;
+    background-position: top left;
+    -webkit-background-clip: text;
 }
 
 .characters{
     color: #03ffcd;
+    background:url("https://media.giphy.com/media/XGP7mf38Vggik/giphy.gif");
+    background-size: auto;
+    background-position: top left;
+    -webkit-background-clip: text;
 }
 
 .illustration{
     color:#292929;
+    background:url("https://media.giphy.com/media/OJp5pne69OeY/giphy.gif");
+    background-size: auto;
+    background-position: top left;
+    -webkit-background-clip: text;
 }

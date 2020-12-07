@@ -24,6 +24,9 @@ body{
     text-decoration: none;
     color: #474747;
 }
+.navbar-menu .current{
+    color: #03ffcd;
+}
 
 .content{
     padding: 30px;
