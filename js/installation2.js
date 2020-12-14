@@ -48,39 +48,6 @@ base('Installation').find(recordID, function(err, record) {
           var image = document.createElement('img');
           image.setAttribute('src', attachment.url);
           mainPictures.appendChild(image);
-
-
-          (function () { // wait for document ready
-            // init
-            var controller = new ScrollMagic.Controller();
-          
-            // define movement of panels
-            var wipeAnimation = new TimelineMax()
-              // animate to second panel
-              .to(image, 0.5, {z: -150})		// move back in 3D space
-              .to(image, 1,   {x: "-25%"})	// move in to first panel
-              .to(image, 0.5, {z: 0})				// move back to origin in 3D space  
-              
-              .to(image, 0.5, {z: -150, delay:1})		// move back in 3D space
-              .to(image, 1,   {x: "-50%"})	// move in to first panel
-              .to(image, 0.5, {z: 0})	
-
-              .to(image, 0.5, {z: -150, delay:1})		// move back in 3D space
-              .to(image, 1,   {x: "-75%"})	// move in to first panel
-              .to(image, 0.5, {z: 0})	
-            // create scene to pin and link animation
-            new ScrollMagic.Scene({
-                triggerElement: ".content",
-                triggerHook: "onEnter",
-                duration: "800%"
-              })
-              .setPin(mainPictures)
-              .setTween(wipeAnimation)
-              .addIndicators() // add indicators (requires plugin)
-              .addTo(controller);
-            });
-
-
     });
 
      //CREATE DYNAMIC LINK TO PROCESS
@@ -155,53 +122,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
         fetchRecord(slug, recordID);
 });
 
-// SCROLLMAGIC ANIM:
-
-// -v1
-
-// var controller = new ScrollMagic.Controller();
-
-// 	// build scenes
-// 	new ScrollMagic.Scene({triggerElement: ".video-container"})
-//                     // .setClassToggle(".animate1", ".animate2") // add class toggle
-//                     .setTween(".main-pictures", 0.3, {opacity:0})
-// 					// .addIndicators() // add indicators (requires plugin)
-// 					.addTo(controller);
 
 
-// -v2 
-
-
-// (function () { // wait for document ready
-//   // init
-//   var controller = new ScrollMagic.Controller();
-
-//   // define movement of panels
-//   var wipeAnimation = new TimelineMax()
-//     // animate to second panel
-//     .to(".main-pictures img", 0.5, {z: -150})		// move back in 3D space
-//     .to(".main-pictures img", 1,   {x: "-25%"})	// move in to first panel
-//     .to(".main-pictures img", 0.5, {z: 0})				// move back to origin in 3D space
-//     // animate to third panel
-//     .to(".main-pictures img", 0.5, {z: -150, delay: 1})
-//     .to(".main-pictures img", 1,   {x: "-50%"})
-//     .to(".main-pictures img", 0.5, {z: 0})
-//     // animate to forth panel
-//     .to(".main-pictures img", 0.5, {z: -150, delay: 1})
-//     .to(".main-pictures img", 1,   {x: "-75%"})
-//     .to(".main-pictures img", 0.5, {z: 0});
-
-//   // create scene to pin and link animation
-//   new ScrollMagic.Scene({
-//       triggerElement: ".images-container",
-//       triggerHook: "onLeave",
-//       duration: "500%"
-//     })
-//     .setPin(".content")
-//     .setTween(wipeAnimation)
-//     .addIndicators() // add indicators (requires plugin)
-//     .addTo(controller);
-//   });
 
 
 ////V1 FETCHING RECORDS AND SLUG LINK TO PROCESS////

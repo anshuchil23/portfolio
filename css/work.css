@@ -27,14 +27,25 @@ body{
     flex-grow: 1;
     text-decoration: none;
     color: #474747;
+    /* color: #fffcf2; */
+    color: transparent;
+    -webkit-text-stroke-width: 1.5px; 
+    -webkit-text-stroke-color:#474747;
+    transition: all 0.3s ease-in;
+}
+
+.navbar-menu a:hover{
+    transform: translateY(-5px);
+    color: #474747;
 }
 
      /* HOVER ANIMATIONS FOR NAVBAR */
 
 .navbar-menu .current{
     color: #03ffcd;
-}
+    -webkit-text-stroke-width: 0px; 
 
+}
 
 
 .content{
@@ -45,7 +56,7 @@ body{
     flex-direction: column;
     perspective: 1px;
     height: 100vh;
-    width: 100%;
+    width: 100%; 
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -55,7 +66,7 @@ body{
 
    /* OPACITY ANIMATION FOR HEADING */
    
-@keyframes lol{
+/* @keyframes lol{
 
     from{
         font-weight: 2000;
@@ -72,37 +83,24 @@ body{
         text-align:center;
         letter-spacing: 20px;
     }
-}
-
-.content h1{
-    font-family: rig-shaded-bold-face, sans-serif; 
-   /* font-weight: 2000;
-    font-size: 6rem;
-    font-style: normal;
-    text-align:center; */
-    
-    transform: translateZ(-2px) scale(3) ;
-
-    animation: lol 1s ease-in infinite;
-    animation-play-state: paused; 
-    animation-delay: calc(var(--scroll) * -1s); 
-    animation-iteration-count: 1;
-    animation-fill-mode: both; 
-    
-}
-
-/* .poo{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    animation: lol 1s ease-in infinite;
-    animation-play-state: paused; 
-    animation-delay: calc(var(--scroll) * -1s); 
-    animation-iteration-count: 1;
-    animation-fill-mode: both; 
 } */
+
+.animate1{
+    font-family: rig-shaded-bold-face, sans-serif; 
+   font-weight: 2000;
+    font-size: 10rem;
+    font-style: normal;
+    text-align:center;
+    transform: translateZ(-2px) scale(3) ;
+    /* color: #474747; */
+    color:#292929;
+    transition: all 0.3s linear;
+}
+
+.animate2{
+    background-color:red;
+    /* font-size: 0rem; */
+}
 
 .content p{
     font-family: rig-shaded-light-face, sans-serif;
@@ -110,7 +108,6 @@ body{
     font-weight: 300;   
     font-style: normal;
     /* line-height: 2rem; */
-
     line-height: 4.5rem;
     /* letter-spacing: 0.05rem; */
  }
@@ -137,12 +134,14 @@ footer{
     flex-direction:row;
     flex-wrap: wrap;
     padding:20rem;
+    flex-grow:1;
+    /* padding-left: 7rem; */
     align-self: center;
     transform: translateZ(0px);
 }
 
 .work-categories a{
-    font-size:10rem;
+    font-size:7rem;
     /* font-family: balboa-plus-primary, sans-serif; */
     font-family:rig-shaded-bold-face, sans-serif;
     font-weight: 400;
@@ -154,9 +153,9 @@ footer{
 
 .work-categories a:hover{
     /* font-family:rig-shaded-medium-extrude, sans-serif; */
-        /* -webkit-text-stroke-width: 3px; */
-    /* -webkit-text-stroke-color:#292929; */
-    /* transform: translateZ(2px); */
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color:#292929;
+    transform: translateX(2px);
     color: transparent;
 }
 
