@@ -40,7 +40,8 @@ base('Illustration').find(recordID, function(err, record) {
     var videoContainer = document.querySelector(".video-container");
 
     if(record.fields.Video){
-    var video = document.createElement('iframe');
+    var video = document.createElement('video');
+    video.setAttribute('controls', 'controls');
     video.setAttribute('src', record.fields.Video[0].url);
     video.autoplay = false;
     videoContainer.appendChild(video);

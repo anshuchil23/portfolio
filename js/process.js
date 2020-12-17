@@ -72,6 +72,8 @@ base('Installation').find(recordID, function(err, record) {
 //  processContainer.forEach(function(process){
 //    process.innerHTML = record.fields
 //  });
+
+// PROCESS DESCRIPTION  
    
  var process1 = document.querySelector(".process1");
    process1.innerHTML = record.fields.Process1;
@@ -102,16 +104,73 @@ base('Installation').find(recordID, function(err, record) {
    }
 
 
-   
+//  SELECT IMAGES 
+
    if(record.fields.Select1){
+    var image = document.createElement('img');
+
      var select1 = document.querySelector(".image-1");
-     select1.innerHTML = record.fields.Select1;
+     image.setAttribute('src', record.fields.Select1[0].url);
+     select1.appendChild(image);
    }
+
+   if(record.fields.Select2){
+    var image = document.createElement('img');
+
+    var select2 = document.querySelector(".image-2");
+    image.setAttribute('src', record.fields.Select2[0].url);
+    select2.appendChild(image);
+  }
+
+  if(record.fields.Select3){
+    var image = document.createElement('img');
+
+    var select3 = document.querySelector(".image-3");
+    image.setAttribute('src', record.fields.Select3[0].url);
+    select3.appendChild(image);
+  }
+  if(record.fields.Select4){
+    var image = document.createElement('img');
+
+    var image = document.createElement('img');
+
+    var select4 = document.querySelector(".image-4");
+    image.setAttribute('src', record.fields.Select4[0].url);
+    select4.appendChild(image);
+  }
+  if(record.fields.Select5){
+    var image = document.createElement('img');
+
+    var select5 = document.querySelector(".image-5");
+    image.setAttribute('src', record.fields.Select5[0].url);
+    select5.appendChild(image);
+  }
+  if(record.fields.Select6){
+    var image = document.createElement('img');
+
+    var select6 = document.querySelector(".image-6");
+    image.setAttribute('src', record.fields.Select6[0].url);
+    select6.appendChild(image);
+  }
+
+  if(record.fields.Outtakes){
+    var outtakes = document.querySelector(".outtakes");
+    outtakes.innerHTML = record.fields.Outtakes;
+  }
+
+  // if(record.fields.ProcessPictures){
+  //   var select = document.querySelector(".image-container");
+  //   record.fields.ProcessPictures.forEach(function(attachment) {
+  //      var image = document.createElement('img');
+  //      image.setAttribute('src', attachment.url);
+  //      processImages.appendChild(image);
+  //      // console.log(record.fields.ProcessPictures[attachment].url);
+  //    });
+  // }
+
  });
   }
 
-
-    
 
     document.addEventListener('DOMContentLoaded', function (event) {
         // DOM Loaded!
@@ -120,8 +179,6 @@ base('Installation').find(recordID, function(err, record) {
         var slug = searchParam.substring(1);
         var recordID = slug.split('-').pop();
         // console.log(recordID);
-
-      
         fetchRecord(slug, recordID);
       });
 

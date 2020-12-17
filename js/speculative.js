@@ -162,6 +162,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
         fetchRecord(slug, recordID);
 });
 
+
+
+const el = document.querySelector(".main-pictures");
+
+el.addEventListener("mousemove", (e) => {
+  el.style.backgroundPositionX = -e.offsetX + "px";
+  el.style.backgroundPositionY = -e.offsetY + "px";
+});
+
+
+
 // SCROLLMAGIC ANIM:
 
 // -v1
